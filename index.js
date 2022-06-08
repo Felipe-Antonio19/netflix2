@@ -2,6 +2,8 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const express = require("express");
 const app = express();
+const cors = require("cors");
+app.use(cors({origin: "*"}));
 const port = 3000;
 const bodyParser = require('body-parser');
 const connection = require("./database/connection");
